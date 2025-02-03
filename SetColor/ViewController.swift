@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    let minValueOfSlider = 0
-    let maxValueofSlider = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()

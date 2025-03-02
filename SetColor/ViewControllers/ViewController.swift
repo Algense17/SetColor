@@ -19,30 +19,33 @@ final class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    weak var delegate: SettinViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         colorView.layer.cornerRadius = 15
         setColor()
         
     }
     
-    @IBAction private func redSliderAction() {
+    @IBAction func colorSliderAction(_ sender: UISlider) {
+        switch sender {
+        case redSlider:
+            redLabel.text = String(format: "%.2f", redSlider.value)
+        case greenSlider:
+            greenLabel.text = String(format: "%.2f", greenSlider.value)
+        default:
+            blueLabel.text = String(format: "%.2f", blueSlider.value)
+        }
         setColor()
-        redLabel.text = String(format: "%.2f", redSlider.value)
+    }
+    @IBAction func doneButtonAction() {
+        delegate?.setCOlor(colorView.backgroundColor ?? .white)
+        dismiss(animated: true)
     }
     
-    @IBAction private func greenSliderAction() {
-        setColor()
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-    }
-    
-    @IBAction private func blueSliderAction () {
-        setColor()
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
-    }
-
     private func setColor() {
         colorView.backgroundColor =  UIColor(
             red: CGFloat(redSlider.value),

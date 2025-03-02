@@ -21,10 +21,10 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let settingVC = segue.destination as? ViewController{
             settingVC.delegate = self
+            settingVC.sendColor = view.backgroundColor ?? .white
         }
     }
     
-  
 }
 
 extension MainViewController: SettinViewControllerDelegate {

@@ -20,6 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     weak var delegate: SettinViewControllerDelegate?
+    var sendColor = UIColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ final class ViewController: UIViewController {
         
         colorView.layer.cornerRadius = 15
         setColor()
+        
+        colorView.backgroundColor = sendColor
         
     }
     
@@ -41,6 +44,7 @@ final class ViewController: UIViewController {
         }
         setColor()
     }
+    
     @IBAction func doneButtonAction() {
         delegate?.setCOlor(colorView.backgroundColor ?? .white)
         dismiss(animated: true)

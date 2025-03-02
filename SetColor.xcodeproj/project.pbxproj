@@ -14,7 +14,7 @@
 		FF647EC52D4FE162005C1282 /* Exceptions for "SetColor" folder in "SetColor" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				SupportigFiles/Info.plist,
 			);
 			target = FF647EB22D4FE15F005C1282 /* SetColor */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SetColor/Info.plist;
+				INFOPLIST_FILE = SetColor/SupportigFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -180,7 +180,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SetColor/Info.plist;
+				INFOPLIST_FILE = SetColor/SupportigFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

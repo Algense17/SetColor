@@ -24,12 +24,17 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        colorView.layer.cornerRadius = 15
-        setColor()
         
         colorView.backgroundColor = sendColor
         
+        redSlider.value = Float(CIColor(color: sendColor).red)
+        greenSlider.value = Float(CIColor(color: sendColor).green)
+        blueSlider.value = Float(CIColor(color: sendColor).blue)
+
+        colorView.layer.cornerRadius = 15
+        
+        setColor()
+
     }
     
     @IBAction func colorSliderAction(_ sender: UISlider) {

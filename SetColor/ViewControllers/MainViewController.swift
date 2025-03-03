@@ -11,7 +11,7 @@ protocol SettinViewControllerDelegate: AnyObject {
     func setCOlor (_ color: UIColor)
 }
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

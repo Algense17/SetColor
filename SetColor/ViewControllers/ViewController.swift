@@ -27,14 +27,12 @@ final class ViewController: UIViewController {
         
         colorView.backgroundColor = sendColor
         
-        redSlider.value = Float(CIColor(color: sendColor).red)
-        greenSlider.value = Float(CIColor(color: sendColor).green)
-        blueSlider.value = Float(CIColor(color: sendColor).blue)
-
+        updateSlider()
+        
         colorView.layer.cornerRadius = 15
         
         setColor()
-
+        
     }
     
     @IBAction func colorSliderAction(_ sender: UISlider) {
@@ -61,6 +59,16 @@ final class ViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha: 1.0
         )
+    }
+    
+    private func updateSlider() {
+        redSlider.value = Float(CIColor(color: sendColor).red)
+        greenSlider.value = Float(CIColor(color: sendColor).green)
+        blueSlider.value = Float(CIColor(color: sendColor).blue)
+        
+        redLabel.text = String(format: "%.2f", redSlider.value)
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLabel.text = String(format: "%.2f", blueSlider.value)
     }
 }
 
